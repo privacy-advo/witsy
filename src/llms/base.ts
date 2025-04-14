@@ -217,7 +217,7 @@ export default class LlmManagerBase implements ILlmManager {
   
   hasChatModels = (engine: string) => {
     if (this.isFavoriteEngine(engine)) return this.config.llm.favorites.length > 0
-    else return this.config.engines[engine].models?.chat?.length > 0
+    else return this.config.engines[engine]?.models?.chat?.length > 0
   }
   
   hasVisionModels = (engine: string) => {
